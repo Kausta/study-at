@@ -13,13 +13,33 @@
   ],
   "rules": {
     "react/jsx-filename-extension": [
-      1, { "extensions": [".js", ".jsx"] }
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
     ],
     "react/prefer-stateless-function": [
-      2, { "ignorePureComponents": true }
+      2,
+      {
+        "ignorePureComponents": true
+      }
     ],
-    "react/forbid-prop-types": [0, { "forbid": [] }],
-    "import/extensions": [1, "never", { "svg": "always" }],
+    "react/forbid-prop-types": [
+      0,
+      {
+        "forbid": []
+      }
+    ],
+    "import/extensions": [
+      1,
+      "never",
+      {
+        "svg": "always"
+      }
+    ],
     "import/no-extraneous-dependencies": [
       "error",
       {
@@ -28,20 +48,33 @@
         "peerDependencies": false
       }
     ],
-    "semi": ["error", "never"],
+    "semi": [
+      "error",
+      "never"
+    ],
     "no-use-before-define": "off",
     "object-curly-newline": "off",
     "no-useless-concat": "off",
+    "arrow-parens": "off",
+    "indent": "off",
+    "implicit-arrow-linebreak": "off",
+    "import/prefer-default-export": "off",
     "prettier/prettier": [
-      "error", {
+      "error",
+      {
         "semi": false,
         "printWidth": 100,
         "singleQuote": true,
-        "trailingComma": "all",
+        "trailingComma": "all"
       }
     ]
   },
   "env": {
     "jest": true
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
   }
 }
