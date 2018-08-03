@@ -4,10 +4,12 @@
  */
 
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
+import theme from 'theme'
 
-import { Container } from 'components'
+import { Container, Content } from 'components'
+import { Logo } from '../components'
 
 type Props = {}
 type State = {}
@@ -28,9 +30,9 @@ export default class SignUp extends React.Component<Props, State> {
   render() {
     return (
       <Container>
-        <View style={styles.container}>
-          <Text style={styles.welcome}>Sign Up!</Text>
-        </View>
+        <Content style={styles.container}>
+          <Logo />
+        </Content>
       </Container>
     )
   }
@@ -38,19 +40,9 @@ export default class SignUp extends React.Component<Props, State> {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+    backgroundColor: theme.colors.background_color,
+    paddingHorizontal: theme.normalize(40),
   },
 })

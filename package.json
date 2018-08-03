@@ -26,12 +26,17 @@
     "react-native": "0.55.4",
     "react-native-config": "^0.11.5",
     "react-native-elements": "^0.19.1",
+    "react-native-fast-image": "^4.0.14",
+    "react-native-firebase": "^4.3.8",
     "react-native-i18n": "^2.0.15",
+    "react-native-maps": "^0.21.0",
     "react-native-paper": "^1.11.1",
+    "react-native-size-matters": "^0.1.2",
     "react-native-vector-icons": "^5.0.0",
     "react-navigation": "^2.9.3",
     "react-navigation-material-bottom-tabs": "^0.3.0",
     "react-redux": "^5.0.7",
+    "reactotron-react-native": "^2.0.0",
     "redux": "^4.0.0",
     "redux-form": "^7.4.2",
     "redux-logger": "^3.0.6",
@@ -70,8 +75,7 @@
     "prettier": "^1.14.0",
     "prop-types": "^15.6.2",
     "react-dom": "^16.4.2",
-    "react-test-renderer": "16.4.1",
-    "reactotron-react-native": "^2.0.0"
+    "react-test-renderer": "16.4.1"
   },
   "jest": {
     "preset": "react-native",
@@ -89,6 +93,11 @@
     "*.js": [
       "yarn lint-fix || true",
       "git add"
+    ]
+  },
+  "rnpm": {
+    "assets": [
+      "./app/assets/fonts"
     ]
   }
 }

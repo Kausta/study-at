@@ -3,10 +3,27 @@
  * @flow
  */
 
-const initialState = {}
+import * as t from './actionTypes'
 
-export default (state: any = initialState, action: any) => {
+type stateType = {
+  user: ?t.User,
+  isLoggedIn: boolean,
+}
+const initialState: stateType = {
+  user: null,
+  isLoggedIn: false,
+}
+
+export default (state: stateType = initialState, action) => {
   switch (action.type) {
+    case t.REGISTER_AUTH_LISTENER:
+      return {
+        ...state,
+        user: action.user,
+        isLoggedIn: !!action.user,
+      }
+    case t.UNREGISTER_AUTH_LISTENER:
+      return state
     default:
       return state
   }

@@ -27,6 +27,12 @@
         "ignorePureComponents": true
       }
     ],
+    "react/prop-types": [
+      0
+    ],
+    "react/destructuring-assignment": [
+      0
+    ],
     "react/forbid-prop-types": [
       0,
       {
@@ -59,6 +65,8 @@
     "indent": "off",
     "implicit-arrow-linebreak": "off",
     "import/prefer-default-export": "off",
+    "global-require": "off",
+    "import/no-named-as-default-member": "off",
     "prettier/prettier": [
       "error",
       {
@@ -76,5 +84,8 @@
     "import/resolver": {
       "babel-module": {}
     }
+  },
+  "globals": {
+    "__DEV__": true
   }
 }

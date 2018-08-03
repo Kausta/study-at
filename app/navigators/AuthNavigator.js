@@ -3,10 +3,17 @@
  * @flow
  */
 
-import { createStackNavigator } from 'react-navigation'
+import { Platform } from 'react-native'
+import { createStackNavigator, createBottomTabNavigator } from 'react-navigation'
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs'
 import { SignIn, SignUp } from 'modules/auth/scenes'
 import tabBarIcon from './util/tabBarIcon'
+
+/* eslint-disable prettier/prettier */
+const createTabNavigator = Platform.OS === 'ios'
+  ? createBottomTabNavigator
+  : createMaterialBottomTabNavigator
+/* eslint-enable prettier/prettier */
 
 const SignInStack = createStackNavigator(
   {
@@ -36,7 +43,7 @@ const SignUpStack = createStackNavigator(
   },
 )
 
-export default createMaterialBottomTabNavigator(
+export default createTabNavigator(
   {
     SignInTab: {
       screen: SignInStack,
@@ -59,5 +66,6 @@ export default createMaterialBottomTabNavigator(
   {
     initialRouteName: 'SignInTab',
     shifting: true,
+    swipeEnabled: true,
   },
 )

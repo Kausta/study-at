@@ -56,7 +56,7 @@ android_resource(
 
 android_binary(
     name = "app",
-    keystore = "//android/keystores:debug",
+    keystore = "debug.keystore",
     manifest = "src/main/AndroidManifest.xml",
     package_type = "debug",
     deps = [

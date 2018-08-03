@@ -4,14 +4,15 @@
  */
 
 import React from 'react'
-import { SafeAreaView, StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native'
+import { Container } from 'native-base'
 
 type Props = {
   children: any,
 }
 export default (props: Props) => {
   const { children } = props
-  return <SafeAreaView style={styles.container}>{children}</SafeAreaView>
+  return <Container style={styles.container}>{children}</Container>
 }
 
 const styles = StyleSheet.create({
